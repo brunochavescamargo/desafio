@@ -5,9 +5,10 @@ import javax.sql.DataSource;
 import org.flywaydb.core.Flyway;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 
 import jakarta.annotation.PostConstruct;
-
+@Profile("!test")
 @Configuration
 public class FlywayConfig {
 

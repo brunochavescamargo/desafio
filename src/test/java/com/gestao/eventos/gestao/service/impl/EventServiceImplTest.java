@@ -33,7 +33,6 @@ class EventServiceImplTest {
 		MockitoAnnotations.openMocks(this);
 	}
 
-	// 1️⃣ Teste: listEvents
 	@Test
 	void shouldReturnPaginatedEvents() {
 		EventEntity event = new EventEntity();
@@ -49,7 +48,6 @@ class EventServiceImplTest {
 		assertEquals("Evento Teste", result.getContent().get(0).getTitulo());
 	}
 
-	// 2️⃣ Teste: getEventById
 	@Test
 	void shouldReturnEventDTOWhenEventExists() {
 		EventEntity event = new EventEntity();
@@ -65,7 +63,6 @@ class EventServiceImplTest {
 		assertEquals("Teste", result.get().getTitulo());
 	}
 
-	// 3️⃣ Teste: createEvent
 	@Test
 	void shouldCreateNewEvent() {
 		EventEntity event = new EventEntity();
