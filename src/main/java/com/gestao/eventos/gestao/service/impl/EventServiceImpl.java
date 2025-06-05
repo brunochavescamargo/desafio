@@ -39,7 +39,7 @@ public class EventServiceImpl implements EventService {
     
     @Override
     public EventEntity createEvent(EventEntity event) {
-        event.setDeletado(false); // Garante que novos eventos não venham marcados como deletados
+        event.setDeletado(false); 
         return eventRepository.save(event);
     }
     
