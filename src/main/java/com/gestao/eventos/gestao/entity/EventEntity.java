@@ -2,6 +2,8 @@ package com.gestao.eventos.gestao.entity;
 
 import java.time.LocalDateTime;
 
+import org.hibernate.annotations.Where;
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import jakarta.persistence.Column;
@@ -15,6 +17,7 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
 @Entity
+@Where(clause = "deletado <> true")
 @Table(name = "EVENT")
 public class EventEntity {
     

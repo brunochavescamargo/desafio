@@ -47,7 +47,7 @@ public class EventServiceImpl implements EventService {
     public Optional<EventEntity> updateEvent(Long id, EventEntity updatedEvent) {
         Optional<EventEntity> optionalEvent = eventRepository.findById(id);
 
-        if (optionalEvent.isEmpty() || optionalEvent.get().isDeletado()) {
+        if (optionalEvent.isEmpty()) {
             return Optional.empty();
         }
 
